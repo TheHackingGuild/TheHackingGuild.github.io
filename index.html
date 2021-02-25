@@ -6,110 +6,115 @@
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-            body, html {
-                margin: 0;
-                padding: 0;
-            }
+            /* Page Elements */
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                }
 
-            .section {
-                min-height: 800px;
-                position: relative;
-                text-align: center;
-                font-family: sans-serif, arial;
-                margin: 0;
-            }
+                .section {
+                    min-height: 800px;
+                    position: relative;
+                    text-align: center;
+                    font-family: sans-serif, arial;
+                    margin: 0;
+                }
 
-            h1, p {
-                margin: 0;
-                font-family: sans-serif, arial;
-                font-weight: bold;
-            }
+                h1, p {
+                    margin: 0;
+                    font-family: sans-serif, arial;
+                    font-weight: bold;
+                }
+                h1 {
+                    font-size: 50px;
+                    margin-bottom: 25px;
+                }
+            /* Text Elements */
+                .text-wr {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    -o-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                }
 
-            .text-wr {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                -moz-transform: translate(-50%, -50%);
-                -o-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-            }
+            /* Sections */
+                #Home {
+                    background: #CAE7B9;
+                }
+                    #Home img {
+                        width: 100%;
+                    }
 
-            #section1 {
-                background: #5c53aa;
-                color: #8d86c3;
-            }
+                #Writeups {
+                    background: #CAE7B9;
+                    color: #0A0908;
+                }
 
-            #section2 {
-                background: #4bbfc3;
-                color: #81d2d5;
-            }
+                #AboutUs {
+                    background: #ebf5ee;
+                    color: #0A0908;
+                }
 
-            #section3 {
-                background: #283044;
-                color: #686e7c;
-            }
+                #Resources {
+                    background: #EAE0D5;
+                    color: #0A0908;
+                }
 
-            #section4 {
-                background: #ebf5ee;
-                color: #aeb9b9;
-            }
+            /* Title */
+                .title-top {
+                    font-size: 60px;
+                    padding-bottom: 30px;
+                }
 
-            h1 {
-                font-size: 50px;
-                margin-bottom: 25px;
-            }
+                .title-bottom {
+                    font-size: 30px;
+                }
 
-            .title-top {
-                font-size: 60px;
-                padding-bottom: 30px;
-            }
+                .title-tx {
+                    font-size: 20px;
+                    opacity: 0.8;
+                }
+            /* Navigation Bar */
+                .nav {
+                    position: fixed; /*left: 50%;*/
+                    width: 100%;
+                    top: 20px;
+                    z-index: 9;
+                    padding-left: 10px;
+                }
 
-            .title-bottom {
-                font-size: 30px;
-            }
+                .nav a {
+                    padding: 7px 20px;
+                    border-radius: 10px;
+                    margin-right: 10px;
+                    background: rgba(255, 255, 255, 0.5);
+                    -webkit-transition: all 0.2s ease-out;
+                    -moz-transition: all 0.2s ease-out;
+                    -ms-transition: all 0.2s ease-out;
+                    -o-transition: all 0.2s ease-out;
+                    transition: all 0.2s ease-out;
+                    text-decoration: none;
+                    color: black;
+                    font-family: sans-serif, arial;
+                    font-weight: 100;
+                }
 
-            .title-tx {
-                font-size: 20px;
-                opacity: 0.8;
-            }
+                .nav a.active {
+                    background: rgba(0, 0, 0, 0.5);
+                    color: white;
+                }
 
-            .nav {
-                position: fixed; /*left: 50%;*/
-                width: 100%;
-                top: 20px;
-                z-index: 9;
-                padding-left: 10px;
-            }
-
-            .nav a {
-                padding: 7px 20px;
-                border-radius: 7px;
-                margin-right: 10px;
-                background: rgba(255, 255, 255, 0.5);
-                -webkit-transition: all 0.2s ease-out;
-                -moz-transition: all 0.2s ease-out;
-                -ms-transition: all 0.2s ease-out;
-                -o-transition: all 0.2s ease-out;
-                transition: all 0.2s ease-out;
-                text-decoration: none;
-                color: black;
-                font-family: sans-serif, arial;
-                font-weight: 100;
-            }
-
-            .nav a.active {
-                background: rgba(0, 0, 0, 0.5);
-                color: white;
-            }
-
-            .nav a:hover {
-                background: rgba(255, 255, 255, 0.7);
-            }
+                .nav a:hover {
+                    background: rgba(255, 255, 255, 0.7);
+                }
         </style>
     </head>
     <body>
+        <!-- Navigation Bar-->
         <div class="nav">
             <nav>
                 <a href="Home Page.html" class="active">Home</a>
@@ -117,34 +122,32 @@
                 <a href="About Us.html">About Us</a>
             </nav>
         </div>
-        <div id="Home" class="Home">
+
+        <!-- Home Page -->
+        <div id="Home" class="section">
+            <img src="https://raw.githubusercontent.com/TheHackingGuild/TheHackingGuild.github.io/main/Images/Favicon/Logo.png" alt="The Hacking Guild Logo"/>
+        </div> 
+
+        <!-- Writeups -->
+        <div id="Writeups" class="section">
             <div class="text-wr">
-                <h1 class="title">
-                    <div class="title-top">Slide Nav Example</div>
-                    <div class="title-tx">Created by Piotr Kumorek</div>
-                </h1>
+                <h1 class="title">Writeups</h1>
+                <p>We currently don't have writeups to share, but are working hard!</p>
             </div>
         </div>
-        <div id="section2" class="section">
+
+        <!-- About Us -->
+        <div id="AboutUs" class="section">
             <div class="text-wr">
-                <h1 class="title">Section 2</h1>
+                <h1 class="title">About Us</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
             </div>
         </div>
-        <div id="section3" class="section">
-            <div class="text-wr">
-                <h1 class="title">Section 3</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-            </div>
-        </div>
-        <div id="section4" class="section">
-            <div class="text-wr">
-                <h1 class="title">Section 4</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-            </div>
-        </div>
+
         <script>
             window.slide = new SlideNav();
         </script>
     </body>
 </html>
+
+
